@@ -29,6 +29,10 @@ protected int getNivel(){
 	return vel;
 }
 
+protected String getNombre(){
+	return nombre;
+}
+
 
 protected void setNombre(String pNombre){
 	this.nombre=pNombre;

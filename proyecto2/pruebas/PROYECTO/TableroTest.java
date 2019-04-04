@@ -6,12 +6,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class CasillaTest {
-	Casilla c;
-
+public class TableroTest {
+	Protagonista prota;
 	@Before
 	public void setUp() throws Exception {
-		c=new Casilla(10);
+		prota = new Protagonista("Vidoky");
 	}
 	//atributos 
 
@@ -20,18 +19,8 @@ public class CasillaTest {
 	}
 
 	@Test
-	public void testCasilla() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testAñadirEvento() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testImprimir() {
-		c.imprimir();
+	public void testMoverse() {
+		Tablero.getmiTablero().moverse(0, prota);
 	}
 
 	//constructura

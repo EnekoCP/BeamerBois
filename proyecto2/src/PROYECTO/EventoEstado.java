@@ -16,8 +16,8 @@ public class EventoEstado extends Evento{
 		dano=pDano;
 		
 	}
-	public void ejecutarEvento(Personaje pPersonaje){
-		
+	public void ejecutarEvento(Protagonista pProta){
+		pProta.setAtributos(vida, velocidad, exp, dano);
 	}
 	
 	//otros_metodos
