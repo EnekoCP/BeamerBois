@@ -5,34 +5,54 @@ public class Protagonista extends Personaje {
 	private int experienciaMax;
 	
 public Protagonista(String pNombre){
-	super (45, 100,4,1);
+	super (45, 100,4,99,1);
 	super.setNombre(pNombre);
 	
 }
 
-private void subirNivel(){
-	
-}
-
-public void setAtributos(int pVida,int pVelocidad,int pExp,int pDano){
+public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 	if(pVida>0){
-		super.setVida(pVida);
+		super.setVida(pVida + super.getVida());
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
 	}
-	else if(pVelocidad>0){}
-	else if(pExp>0){}
+	else if(pVelocidad>0){
+		super.setVel(pVelocidad+super.getVelocidad());
+		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+		System.out.println("Tu velocidad se ha incrementado en: "+pVelocidad+ " Puntos");
+	}
+	else if(pExp>0){
+		super.setExp(pExp+super.getExp());;
+		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+		System.out.println("Tu experiencia se ha incrementado en: "+pExp+ " Puntos");
+	}
 	else{
+		super.setDanno(pDanno+super.getDanno());;
+		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+		System.out.println("Tu danno se ha incrementado en: "+pDanno+ " Puntos");
 		
 	}
 }
 
+private void subirNivel(){
+	if (this.getExp()>=this.getNivel()*100){
+		this.setNivel(this.getNivel()+1);
+	}
+}
 
 public int getExp(){
 	return experienciaAct;
 }
 
-public int getNivel(){return super.getNivel();}
+public int getNivel(){
+	return super.getNivel();}
+
+@Override
+public void atacar(Personaje pEnemigo)
+{
+	// TODO Auto-generated method stub
+	
+}
 
 
 }

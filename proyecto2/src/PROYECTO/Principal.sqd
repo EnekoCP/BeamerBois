@@ -7054,7 +7054,7 @@
                                       <movable>true</movable>
                                     </target>
                                     <bendpoints/>
-                                    <name>ejecutarEvento(int pIdEvento,Personaje pProtagionista):Evento</name>
+                                    <name>ejecutarEvento(int pIdEvento,Personaje pProtagionista):void</name>
                                     <direction>true</direction>
                                     <order>7</order>
                                     <oldOrder>7</oldOrder>

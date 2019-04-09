@@ -6,15 +6,17 @@ abstract class Personaje  {
 	private int danno;
 	private int vel;
 	private int nivel;
+	private int exp;
 
 	
-public Personaje (int pVida, int pDanno, int pVel,int pNivel ){
+public Personaje (int pVida, int pDanno, int pVel,int pExp,int pNivel ){
 	vida=pVida;
 	danno=pDanno;
 	vel=pVel;
+	exp =pExp;
 	nivel=pNivel;
 }
-public void atacar(Personaje pPersonaje){}
+public abstract void atacar(Personaje pPersonajeRival);
 
 
 
@@ -28,9 +30,19 @@ public int getVelocidad(){
 protected int getNivel(){
 	return vel;
 }
+protected int getDanno(){
+	return danno;
+}
+protected int getVida(){
+	return vida;
+}
 
 protected String getNombre(){
 	return nombre;
+}
+
+protected int getExp(){
+	return exp;
 }
 
 
@@ -39,19 +51,22 @@ protected void setNombre(String pNombre){
 }
 
 protected void setVida(int pVida){
-	//this.nombre=pNombre;
+	this.vida=pVida;
 }
 
 protected void setDanno(int pDanno){
-	//this.nombre=pNombre;
+	this.danno=pDanno;
 }
 
 protected void setVel(int pVel){
-	//this.nombre=pNombre;
+	this.vel=pVel;
+}
+protected void setExp(int pExp){
+	this.exp=pExp;
 }
 
 protected void setNivel(int pNivel){
-	//this.nombre=pNombre;
+	this.nivel=pNivel;
 }
 
 

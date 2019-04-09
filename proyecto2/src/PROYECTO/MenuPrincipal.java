@@ -19,7 +19,7 @@ public class MenuPrincipal {
 		
 		String pNombre=this.nombrePersonaje();
 		Protagonista prota= new Protagonista(pNombre);
-		boolean vivo=prota.comprobarVida();
+		boolean vivo=true;
 		while(vivo){
 			this.menuTirarDado();
 			int numDado=this.tirarDado();
@@ -30,10 +30,11 @@ public class MenuPrincipal {
 		// TODO Auto-generated method stub
 
 	}
-	//atributos 
-
-	//constructura
-	public void menuTirarDado(){}
+	
+	public void menuTirarDado(){
+		System.out.println("Pulsar INTRO para tirar dado.");
+		
+	}
 	private int tirarDado(){
 		return Dado.getDado().tirarDado();
 	}

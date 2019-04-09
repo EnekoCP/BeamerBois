@@ -14,6 +14,14 @@ public class EventoCambate extends Evento {
 	//otros_metodos
 	public void ejecutarEvento(Personaje pPersonaje){
 	}
-	private void combatir(Personaje pPersonaje){}
+	private void combatir(Personaje pProtagonista)
+	{
+		Personaje prota = pProtagonista;
+		
+		
+		
+		
+		
+	}
 	
 }

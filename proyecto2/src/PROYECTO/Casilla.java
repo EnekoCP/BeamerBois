@@ -12,7 +12,7 @@ public void SetEvento(int pid){
 }
 
 public void CargarCasilla(Protagonista pProtagonista){
-	ListaEventos.getListaEventos().ejecutarEvento(idEvento,pProtagonista);
+	ListaEventos.getListaEventos().ejecutarEvento(this.idEvento,pProtagonista);
 }
 
 }
