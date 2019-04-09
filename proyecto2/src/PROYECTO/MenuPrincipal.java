@@ -16,7 +16,6 @@ public class MenuPrincipal {
 	}
 
 	public void jugarPartida() {
-		
 		String pNombre=this.nombrePersonaje();
 		Protagonista prota= new Protagonista(pNombre);
 		boolean vivo=true;
@@ -33,13 +32,21 @@ public class MenuPrincipal {
 	
 	public void menuTirarDado(){
 		System.out.println("Pulsar INTRO para tirar dado.");
+		sc.nextLine();
 		
 	}
 	private int tirarDado(){
 		return Dado.getDado().tirarDado();
 	}
 	
-	public void menuCombate(){}
+	public String menuCombate(){
+		System.out.println("Que quieres hacer:/n"
+				+ "1. Pulse < x > para atacar/n"
+				+ "2. Pulse < z > para defenderte");
+		// TODO hacer una exepcion en el caso de que metan un formato incorrecto
+		String resp=sc.nextLine();
+		return resp;
+		}
 	//otros_metodos
 	public void menuMoverse(){}
 	

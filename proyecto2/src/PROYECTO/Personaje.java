@@ -16,7 +16,10 @@ public Personaje (int pVida, int pDanno, int pVel,int pExp,int pNivel ){
 	exp =pExp;
 	nivel=pNivel;
 }
-public abstract void atacar(Personaje pPersonajeRival);
+protected  void atacar(Personaje pPersonajeRival){
+	this.vida=pPersonajeRival.danno;
+		
+}
 
 
 

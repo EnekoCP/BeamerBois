@@ -54,5 +54,15 @@ public void atacar(Personaje pEnemigo)
 	
 }
 
+public void defenderse(int pDen){
+	setVida(getVida()-pDen);
+}
+
+public boolean comprobarVida(){
+	boolean vida=super.comprobarVida();
+	if(!vida){System.out.println("Has muerto en el combate");}
+	return vida;
+}
+
 
 }

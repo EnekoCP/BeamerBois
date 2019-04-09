@@ -1,27 +1,46 @@
 package PROYECTO;
 
-import java.util.ArrayList;
+import java.util.Random;
 
 public class EventoCambate extends Evento {
 	//atributos 
-	private Enemigo enemigo=null;
+	private Enemigo ene=null;
 	
 	//constructura
 	public EventoCambate(String pDisc, Enemigo pEne){
 		super(pDisc);
-		enemigo=pEne;
+		ene=pEne;
 	}
 	//otros_metodos
-	public void ejecutarEvento(Personaje pPersonaje){
+	public void ejecutarEvento(Protagonista pProta){
+		while(pProta.comprobarVida()&&ene.comprobarVida()){
+		String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
+		
+		if(resp.equals("x")){
+		this.combatir(pProta);}
+		else if(resp.equals("z")){
+		pProta.defenderse(valorDefensa());
+		}
+		}
 	}
-	private void combatir(Personaje pProtagonista)
+	private void combatir(Personaje pProta)
 	{
-		Personaje prota = pProtagonista;
 		
-		
-		
-		
-		
+		if(pProta.getVelocidad()>ene.getVelocidad()){
+			pProta.atacar(ene);
+		}
+		else{
+			ene.atacar(pProta);
+		}
 	}
+	private int valorDefensa()
+	{
+		Random r=new Random();
+		int danno= r.nextInt(ene.getDanno());
+		return danno;
+	}
+	
+			
+	
 	
 }

@@ -15,11 +15,13 @@ public Enemigo (int pExperienciaSoltada, String pNombre){
 private void SoltarExp(Protagonista pProtagonista){
 	pProtagonista.setAtributos(0, 0, this.experienciaSoltada, 0);
 }
-@Override
-public void atacar(Personaje pProtagonista)
-{
-	// TODO Auto-generated method stub
+
 	
+
+public boolean comprobarVida(){
+	boolean vida=super.comprobarVida();
+	if(!vida){System.out.println("El enemigo ha muerto");}
+	return vida;
 }
 
 	

@@ -2,12 +2,7 @@ package PROYECTO;
 
 public class Main {
 	
-	static MenuPrincipal menuPrincipal;
-	
-public Main (){}
-	
-	
-public void jugarPartida(){
+public static void main(String[] args){
 	MenuPrincipal.getMenuPrincipal().jugarPartida();
 	
 }
