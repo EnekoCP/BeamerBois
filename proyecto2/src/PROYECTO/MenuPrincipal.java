@@ -6,7 +6,9 @@ public class MenuPrincipal {
 	static Scanner sc;
 	private static MenuPrincipal miMenu;
 	
-	private MenuPrincipal(){}
+	private MenuPrincipal(){
+	sc=new Scanner (System.in); 
+	}
 	
 	public static MenuPrincipal getMenuPrincipal(){
 		if(miMenu==null){
@@ -21,7 +23,9 @@ public class MenuPrincipal {
 		boolean vivo=true;
 		while(vivo){
 			this.menuTirarDado();
+			prota.imprimirInfoPersonaje();
 			int numDado=this.tirarDado();
+			System.out.println("Has sacado:"+numDado+"!");
 			Tablero.getmiTablero().moverse(numDado,prota);
 			vivo=prota.comprobarVida();
 			
@@ -36,23 +40,27 @@ public class MenuPrincipal {
 		
 	}
 	private int tirarDado(){
-		return Dado.getDado().tirarDado();
+		//return Dado.getDado().tirarDado();
+		return 1;
 	}
 	
 	public String menuCombate(){
-		System.out.println("Que quieres hacer:/n"
-				+ "1. Pulse < x > para atacar/n"
-				+ "2. Pulse < z > para defenderte");
+		String resp="";
+		System.out.println("Que quieres hacer:\n"
+				+ "1. Pulse < x > para atacar\n"
+				+ "2. Pulse < z > para defenderte\n");
 		// TODO hacer una exepcion en el caso de que metan un formato incorrecto
-		String resp=sc.nextLine();
+		resp=sc.nextLine();
 		return resp;
 		}
 	//otros_metodos
 	public void menuMoverse(){}
 	
 	private String nombrePersonaje(){
-		///system aou nombre
-		String nombre = sc.nextLine();
+		String nombre="";
+		System.out.println("Como se llamará tu personaje?");
+		nombre = sc.nextLine();
+		System.out.println("Bienvenido a Vikody "+nombre);
 		return nombre;
 	}
 	

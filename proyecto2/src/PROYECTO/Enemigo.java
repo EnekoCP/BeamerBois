@@ -6,10 +6,10 @@ public class Enemigo extends Personaje {
 	private int experienciaSoltada;
 	private String nombre;
 
-public Enemigo (int pExperienciaSoltada, String pNombre){
-	super(5, 100,4,99,1);
+public Enemigo (int pVida,int pDanno, int pVel,int pExperienciaSoltada, String pNombre){
+	super(100,35,3);
 	this.nombre=pNombre;
-	this.experienciaSoltada=super.getExp();
+	this.experienciaSoltada=pExperienciaSoltada;
 	
 }
 private void SoltarExp(Protagonista pProtagonista){

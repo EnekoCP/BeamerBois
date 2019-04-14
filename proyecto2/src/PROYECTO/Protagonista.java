@@ -5,14 +5,14 @@ public class Protagonista extends Personaje {
 	private int experienciaMax;
 	
 public Protagonista(String pNombre){
-	super (45, 100,4,99,1);
+	super (100, 45,5);
 	super.setNombre(pNombre);
 	
 }
 
 public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 	if(pVida>0){
-		super.setVida(pVida + super.getVida());
+		super.incremetoVida(pVida);
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
 	}
@@ -47,12 +47,7 @@ public int getExp(){
 public int getNivel(){
 	return super.getNivel();}
 
-@Override
-public void atacar(Personaje pEnemigo)
-{
-	// TODO Auto-generated method stub
-	
-}
+
 
 public void defenderse(int pDen){
 	setVida(getVida()-pDen);

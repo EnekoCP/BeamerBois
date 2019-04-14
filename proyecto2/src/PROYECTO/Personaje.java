@@ -9,22 +9,23 @@ abstract class Personaje  {
 	private int exp;
 
 	
-public Personaje (int pVida, int pDanno, int pVel,int pExp,int pNivel ){
+public Personaje (int pVida, int pDanno, int pVel){
 	vida=pVida;
 	danno=pDanno;
 	vel=pVel;
-	exp =pExp;
-	nivel=pNivel;
+	exp =0;
+	nivel=1;
 }
-protected  void atacar(Personaje pPersonajeRival){
-	this.vida=pPersonajeRival.danno;
-		
+protected void atacar(Personaje pEne)
+{   
+	pEne.setVida(getDanno());
+	imprimirInfoPersonaje();
+	
+	
 }
-
-
 
 public boolean comprobarVida(){
-	return (this.vida<=0);
+	return (this.vida>=0);
 }
 public int getVelocidad(){
 	return vel;
@@ -54,7 +55,10 @@ protected void setNombre(String pNombre){
 }
 
 protected void setVida(int pVida){
-	this.vida=pVida;
+	this.vida=(vida-pVida);
+}
+protected void incremetoVida(int pVida){
+	this.vida=(vida+pVida);
 }
 
 protected void setDanno(int pDanno){
@@ -72,6 +76,15 @@ protected void setNivel(int pNivel){
 	this.nivel=pNivel;
 }
 
+
+public void imprimirInfoPersonaje(){
+	System.out.println("----------------------------------------------------------------------------------");
+	System.out.println("Status Vida de:" +nombre);
+	System.out.println("Vida: "+vida+"                                        Exp: "+exp);
+	System.out.println("Velocidad: "+vel+"                                        Nivel: "+nivel);
+	System.out.println("----------------------------------------------------------------------------------");
+	
+}
 
 
 

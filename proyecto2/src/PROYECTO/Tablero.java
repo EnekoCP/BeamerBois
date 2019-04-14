@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Tablero {
 	private ArrayList<Casilla> lista;
-	private static int CantCasillas = 20;
+	private static int CantCasillas = 21;
 	private int posicion=0;
 	private static Tablero miTablero=null;
 	
@@ -26,7 +26,7 @@ private void inicializarCasilla(){
 	// Por defecto la idVento de las casillas será igual a nombre. Para futuros cambios,
 	// utilizamos el metodo setEvento
 	
-	for (int i = 0; i < 20; i++)
+	for (int i = 0; i < CantCasillas; i++)
 	{
 		Casilla c = new Casilla(i);
 		lista.add(c);
@@ -38,9 +38,14 @@ private boolean ComprobarTablero(){
 }
 
 public void moverse(int pValorDado,Protagonista pProta){
+	//if(posicion==0){
+	//	lista.get(posicion).CargarCasilla(pProta);
+	//	posicion=posicion+pValorDado;
+//	}
+//	else{
 	posicion=posicion+pValorDado;
-	lista.get(posicion).CargarCasilla(pProta);
-}
+	lista.get(posicion).CargarCasilla(pProta);}
+//}
 	
 }
 

@@ -20,7 +20,7 @@ public class TableroTest {
 
 	@Test
 	public void testMoverse() {
-		Tablero.getmiTablero().moverse(0, prota);
+		Tablero.getmiTablero().moverse(1, prota);
 	}
 
 	//constructura
