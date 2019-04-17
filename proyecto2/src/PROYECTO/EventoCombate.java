@@ -13,7 +13,7 @@ public class EventoCombate extends Evento {
 	}
 	//otros_metodos
 	public void ejecutarEvento(Protagonista pProta){
-		while(pProta.comprobarVida()&&ene.comprobarVida()){
+		while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
 		String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
 		if(resp.equals("x")){
 			System.out.println("¡Combate!");

@@ -11,8 +11,8 @@ public Protagonista(String pNombre){
 }
 
 public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
-	if(pVida>0){
-		super.incremetoVida(pVida);
+	if(pVida!=0){
+		super.decrincremetoVida(pVida);
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
 	}
@@ -22,9 +22,10 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 		System.out.println("Tu velocidad se ha incrementado en: "+pVelocidad+ " Puntos");
 	}
 	else if(pExp>0){
-		super.setExp(pExp+super.getExp());;
+		super.setExp(pExp+super.getExp());
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu experiencia se ha incrementado en: "+pExp+ " Puntos");
+		this.subirNivel();
 	}
 	else{
 		super.setDanno(pDanno+super.getDanno());;
@@ -37,6 +38,7 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 private void subirNivel(){
 	if (this.getExp()>=this.getNivel()*100){
 		this.setNivel(this.getNivel()+1);
+		System.out.println("Has subido de NIVEL !!!");
 	}
 }
 

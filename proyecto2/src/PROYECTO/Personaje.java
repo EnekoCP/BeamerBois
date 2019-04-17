@@ -20,6 +20,7 @@ protected void atacar(Personaje pEne)
 {   
 	pEne.setVida(getDanno());
 	imprimirInfoPersonaje();
+	pEne.imprimirInfoPersonaje();
 	
 	
 }
@@ -57,7 +58,7 @@ protected void setNombre(String pNombre){
 protected void setVida(int pVida){
 	this.vida=(vida-pVida);
 }
-protected void incremetoVida(int pVida){
+protected void decrincremetoVida(int pVida){
 	this.vida=(vida+pVida);
 }
 
@@ -79,7 +80,7 @@ protected void setNivel(int pNivel){
 
 public void imprimirInfoPersonaje(){
 	System.out.println("----------------------------------------------------------------------------------");
-	System.out.println("Status Vida de:" +nombre);
+	System.out.println("Status Vida de:" +nombre+"                           Danno: "+danno);
 	System.out.println("Vida: "+vida+"                                        Exp: "+exp);
 	System.out.println("Velocidad: "+vel+"                                        Nivel: "+nivel);
 	System.out.println("----------------------------------------------------------------------------------");
