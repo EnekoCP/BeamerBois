@@ -29,24 +29,23 @@ private void incializarEvento(){
 	
 	
 	//Asignaciones:
-	EventoEstado evento0=new EventoEstado("Oca cero:",0,0,0,0);
-	EventoEstado evento1=new EventoEstado("Oca Estado:",10,0,0,0);
-	EventoCombate evento2=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene1);
-	EventoMovimiento evento3=new EventoMovimiento("Oca Posicion:",2);
-	EventoEstado evento4=new EventoEstado("Oca Estado:",0,0,0,15);
-	EventoCombate evento5=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene2);
-	EventoEstado evento6=new EventoEstado("Oca Estado:",-5,0,0,0);
-	EventoEstado evento7=new EventoEstado("Casilla Vacia:",0,0,0,0);
-	EventoEstado evento8=new EventoEstado("Oca Estado:",0,0,0,15);
-	EventoMovimiento evento9=new EventoMovimiento("Oca Posicion:",1);
-	EventoCombate evento10=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene3);
-	EventoEstado evento11=new EventoEstado("Oca Estado:",10,0,15,0);
-	EventoCombate evento12=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene4);
-	EventoMovimiento evento13=new EventoMovimiento("Oca Posicion:",-5);
-	EventoEstado evento14=new EventoEstado("Oca Estado:",0,2,0,0);
-	EventoEstado evento15=new EventoEstado("Casilla Vacia:",0,0,0,0);
+	EventoEstado evento1=new EventoEstado("Oca cero:",0,0,0,0);
+	EventoEstado evento2=new EventoEstado("Oca Estado:",10,0,0,0);
+	EventoCombate evento3=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene1);
+	EventoMovimiento evento4=new EventoMovimiento("Oca Posicion:",2);
+	EventoEstado evento5=new EventoEstado("Oca Estado:",0,0,0,15);
+	EventoCombate evento6=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene2);
+	EventoEstado evento7=new EventoEstado("Oca Estado:",-5,0,0,0);
+	EventoEstado evento8=new EventoEstado("Casilla Vacia, tira de nuevo el dado :)",0,0,0,0);
+	EventoEstado evento9=new EventoEstado("Oca Estado:",0,0,0,15);
+	EventoMovimiento evento10=new EventoMovimiento("Oca Posicion:",1);
+	EventoCombate evento11=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene3);
+	EventoEstado evento12=new EventoEstado("Oca Estado:",10,0,15,0);
+	EventoCombate evento13=new EventoCombate("Te ha tocado un enemigo. ¿Que quieres hacer?",ene4);
+	EventoMovimiento evento14=new EventoMovimiento("Oca Posicion:",-5);
+	EventoEstado evento15=new EventoEstado("Oca Estado:",0,2,0,0);
+	EventoEstado evento16=new EventoEstado("Casilla Vacia, tira de nuevo el dado :)",0,0,0,0);
 	
-	lista.add(evento0);
 	lista.add(evento1);
 	lista.add(evento2);
 	lista.add(evento3);
@@ -62,6 +61,7 @@ private void incializarEvento(){
 	lista.add(evento13);
 	lista.add(evento14);
 	lista.add(evento15);
+	lista.add(evento16);
 }
 
 public void ejecutarEvento(int pId, Protagonista pProta){

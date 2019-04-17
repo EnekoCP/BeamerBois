@@ -10,5 +10,5 @@ public class EventoMovimiento extends Evento {
 	}
 	
 	public void ejecutarEvento(Personaje pPersonaje){}
-	//otros_metodos
+	
 }

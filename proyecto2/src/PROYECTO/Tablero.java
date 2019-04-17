@@ -2,9 +2,10 @@ package PROYECTO;
 
 import java.util.*;
 
+
 public class Tablero {
 	private ArrayList<Casilla> lista;
-	private static int CantCasillas = 21;
+	private static int CantCasillas = 16;
 	private int posicion=0;
 	private static Tablero miTablero=null;
 	
@@ -34,19 +35,29 @@ private void inicializarCasilla(){
 }
 
 private boolean ComprobarTablero(){
-	return (posicion<=CantCasillas);
+	return (posicion<CantCasillas);
 }
 
 public void moverse(int pValorDado,Protagonista pProta){
-	//if(posicion==0){
-	//	lista.get(posicion).CargarCasilla(pProta);
-	//	posicion=posicion+pValorDado;
-//	}
-//	else{
 	posicion=posicion+pValorDado;
-	lista.get(posicion).CargarCasilla(pProta);}
+try{
+	if (this.ComprobarTablero()){
+
+		lista.get(posicion).CargarCasilla(pProta);}
+	else{
+		throw(new FueraTableroExcepcion());
+	}
+}
+	catch (FueraTableroExcepcion e){
+		System.out.println("Fuera Tablero");
+		pProta.setMuerte();
+	}
+
+}
 //}
-	
+	public int getPosicion(){
+		return this.posicion;
+	}
 }
 
 

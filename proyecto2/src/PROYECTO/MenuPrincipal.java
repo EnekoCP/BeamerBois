@@ -40,8 +40,8 @@ public class MenuPrincipal {
 		
 	}
 	private int tirarDado(){
-		//return Dado.getDado().tirarDado();
-		return 1;
+		return Dado.getDado().tirarDado();
+		//return 11;
 	}
 	
 	public String menuCombate(){

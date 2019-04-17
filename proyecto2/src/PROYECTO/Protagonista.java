@@ -11,27 +11,49 @@ public Protagonista(String pNombre){
 }
 
 public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
-	if(pVida!=0){
+	if(pVida>0){
 		super.decrincremetoVida(pVida);
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
 	}
-	else if(pVelocidad>0){
+	if(pVelocidad>0){
 		super.setVel(pVelocidad+super.getVelocidad());
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu velocidad se ha incrementado en: "+pVelocidad+ " Puntos");
 	}
-	else if(pExp>0){
+	 if(pExp>0){
 		super.setExp(pExp+super.getExp());
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu experiencia se ha incrementado en: "+pExp+ " Puntos");
-		this.subirNivel();
+		subirNivel();
 	}
-	else{
+	 if(pDanno>0){
 		super.setDanno(pDanno+super.getDanno());;
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu danno se ha incrementado en: "+pDanno+ " Puntos");
 		
+	}
+	 if(pDanno<0){
+			super.setDanno(pDanno+super.getDanno());;
+			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+			System.out.println("Tu danno se ha decrementado en: "+pDanno+ " Puntos");
+			
+		}
+	 if(pExp<0){
+			super.setExp(pExp+super.getExp());
+			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+			System.out.println("Tu experiencia se ha decrementado en: "+pExp+ " Puntos");
+			subirNivel();
+		}
+	 if(pVelocidad<0){
+			super.setVel(pVelocidad+super.getVelocidad());
+			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+			System.out.println("Tu velocidad se ha decrementado en: "+pVelocidad+ " Puntos");
+		}
+	 if(pVida<0){
+		super.decrincremetoVida(pVida);
+		System.out.println("¡UPS, "+super.getNombre()+"!");
+		System.out.println("Tu vida se ha decrementado en: "+pVida+ " Puntos");
 	}
 }
 
@@ -44,6 +66,9 @@ private void subirNivel(){
 
 public int getExp(){
 	return experienciaAct;
+}
+protected void setMuerte(){
+	super.setMuerte(0);
 }
 
 public int getNivel(){

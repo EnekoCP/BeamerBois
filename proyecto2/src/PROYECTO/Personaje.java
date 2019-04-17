@@ -7,6 +7,7 @@ abstract class Personaje  {
 	private int vel;
 	private int nivel;
 	private int exp;
+	private int posicion=0;
 
 	
 public Personaje (int pVida, int pDanno, int pVel){
@@ -57,6 +58,9 @@ protected void setNombre(String pNombre){
 
 protected void setVida(int pVida){
 	this.vida=(vida-pVida);
+}
+protected void setMuerte(int pVida){
+	this.vida=pVida;
 }
 protected void decrincremetoVida(int pVida){
 	this.vida=(vida+pVida);
