@@ -28,7 +28,6 @@ public class MenuPrincipal {
 			System.out.println("Has sacado:"+numDado+"!");
 			Tablero.getmiTablero().moverse(numDado,prota);
 			vivo=prota.comprobarVida();
-			
 		}
 		// TODO Auto-generated method stub
 

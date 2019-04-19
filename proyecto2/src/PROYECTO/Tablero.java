@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Tablero {
 	private ArrayList<Casilla> lista;
-	private static int CantCasillas = 16;
+	private static int CantCasillas = 30;
 	private int posicion=0;
 	private static Tablero miTablero=null;
 	
@@ -49,8 +49,8 @@ try{
 	}
 }
 	catch (FueraTableroExcepcion e){
-		System.out.println("Fuera Tablero");
-		pProta.setMuerte();
+		//System.out.println("Fuera Tablero");
+		lista.get(29).CargarCasilla(pProta);
 	}
 
 }

@@ -1,5 +1,7 @@
 package PROYECTO;
 
+import java.util.Random;
+
 abstract class Personaje  {
 	private String nombre;
 	private int vida;
@@ -7,7 +9,6 @@ abstract class Personaje  {
 	private int vel;
 	private int nivel;
 	private int exp;
-	private int posicion=0;
 
 	
 public Personaje (int pVida, int pDanno, int pVel){
@@ -19,22 +20,21 @@ public Personaje (int pVida, int pDanno, int pVel){
 }
 protected void atacar(Personaje pEne)
 {   
+	
 	pEne.setVida(getDanno());
-	imprimirInfoPersonaje();
-	pEne.imprimirInfoPersonaje();
 	
 	
 }
 
 public boolean comprobarVida(){
-	return (this.vida>=0);
+	return (this.vida>0);
 }
 public int getVelocidad(){
 	return vel;
 }
 
 protected int getNivel(){
-	return vel;
+	return nivel;
 }
 protected int getDanno(){
 	return danno;
@@ -81,6 +81,9 @@ protected void setNivel(int pNivel){
 	this.nivel=pNivel;
 }
 
+public void defenderse(Personaje pEne){
+	setVida(pEne.valorDefensa());
+}
 
 public void imprimirInfoPersonaje(){
 	System.out.println("----------------------------------------------------------------------------------");
@@ -91,7 +94,12 @@ public void imprimirInfoPersonaje(){
 	
 }
 
-
+private int valorDefensa()
+{
+	Random r=new Random();
+	int danno= r.nextInt(getDanno());
+	return danno;
+}
 
 
 }

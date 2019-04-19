@@ -1,6 +1,7 @@
 package PROYECTO;
 
-import java.util.Random;
+
+
 
 public class EventoCombate extends Evento {
 	//atributos 
@@ -16,11 +17,19 @@ public class EventoCombate extends Evento {
 		while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
 		String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
 		if(resp.equals("x")){
-			System.out.println("¡Combate!");
-		this.combatir(pProta);}
+			System.out.println("#####################################################################");
+			System.out.println("                             ¡Combate!");
+			System.out.println("#####################################################################");
+			pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
+			
+			
+			this.combatir(pProta);}
 		else if(resp.equals("z")){
-			System.out.println("defensa");
-		pProta.defenderse(valorDefensa());
+			System.out.println("#####################################################################");
+			System.out.println("                             ¡Defensa!");
+			System.out.println("#####################################################################");
+			pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
+		this.defenderse(pProta);
 		}
 		}
 		if(pProta.comprobarVida()){pProta.imprimirInfoPersonaje();}
@@ -30,23 +39,29 @@ public class EventoCombate extends Evento {
 		
 		if(pProta.getVelocidad()>ene.getVelocidad()){
 			pProta.atacar(ene);
-			if(ene.getVida()<=0){
+			if(ene.getVida()>0){
 			ene.atacar(pProta);}
 		}
 		else{
 			ene.atacar(pProta);
-			if(pProta.getVida()<=0){
-			pProta.atacar(ene);}
+			if(pProta.getVida()>0){
+			pProta.atacar(ene);
+			}
 		}
-	}
-	private int valorDefensa()
-	{
-		Random r=new Random();
-		int danno= r.nextInt(ene.getDanno());
-		return danno;
+		System.out.println("Y el resultado fue...");
+		pProta.imprimirInfoPersonaje();
+		ene.imprimirInfoPersonaje();
 	}
 	
-			
+	private void defenderse (Personaje pProta)
+	{
+		
+		pProta.defenderse(ene);
+		
+		System.out.println("Y el resultado fue...");
+		pProta.imprimirInfoPersonaje();
+		ene.imprimirInfoPersonaje();
+	}		
 	
 	
 }

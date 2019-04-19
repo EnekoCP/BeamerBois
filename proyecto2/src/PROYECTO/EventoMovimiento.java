@@ -9,6 +9,9 @@ public class EventoMovimiento extends Evento {
 		this.posicion=pPosicion;
 	}
 	
-	public void ejecutarEvento(Personaje pPersonaje){}
+	public void ejecutarEvento(Protagonista pPersonaje){
+		
+		Tablero.getmiTablero().moverse(posicion, pPersonaje);
+	}
 	
 }

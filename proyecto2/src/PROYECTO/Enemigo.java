@@ -1,14 +1,15 @@
 package PROYECTO;
 
-import java.util.Random;
+
 
 public class Enemigo extends Personaje {
 	private int experienciaSoltada;
 
-public Enemigo (int pVida,int pDanno, int pVel,int pExperienciaSoltada, String pNombre){
-	super(100,35,3);
+public Enemigo (int pVida,int pDanno,int pVel,int pExperienciaSoltada, String pNombre){
+	super(pVida,pDanno,pDanno);
 	super.setNombre(pNombre);
 	super.setExp(pExperienciaSoltada);
+	super.setVel(pVel);
 	this.experienciaSoltada=pExperienciaSoltada;
 	
 	
