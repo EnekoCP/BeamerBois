@@ -59,9 +59,7 @@ protected void setNombre(String pNombre){
 protected void setVida(int pVida){
 	this.vida=(vida-pVida);
 }
-protected void setMuerte(int pVida){
-	this.vida=pVida;
-}
+
 protected void decrincremetoVida(int pVida){
 	this.vida=(vida+pVida);
 }

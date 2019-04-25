@@ -39,13 +39,13 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 		}
 	 if(pExp<0){
 			super.setExp(pExp+super.getExp());
-			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+			System.out.println("¡UPS, "+super.getNombre()+"!");
 			System.out.println("Tu experiencia se ha decrementado en: "+pExp+ " Puntos");
 			subirNivel();
 		}
 	 if(pVelocidad<0){
 			super.setVel(pVelocidad+super.getVelocidad());
-			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
+			System.out.println("¡UPS, "+super.getNombre()+"!");
 			System.out.println("Tu velocidad se ha decrementado en: "+pVelocidad+ " Puntos");
 		}
 	 if(pVida<0){
@@ -85,12 +85,6 @@ public void subirNivel(){
 	}
 	
 }
-
-protected void setMuerte(){
-	super.setMuerte(0);
-}
-
-
 
 
 public void defenderse(int pDen){

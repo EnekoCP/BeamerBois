@@ -6419,7 +6419,7 @@
       <children/>
       <filterProperty/>
       <content>*Empieza Bucle*</content>
-      <old></old>
+      <old>*Empieza Bucle*</old>
     </net.java.amateras.uml.model.NoteModel>
   </children>
   <filterProperty/>
