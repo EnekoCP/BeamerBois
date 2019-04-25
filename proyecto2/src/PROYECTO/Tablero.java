@@ -54,10 +54,7 @@ try{
 	}
 
 }
-//}
-	public int getPosicion(){
-		return this.posicion;
-	}
+
 }
 
 
