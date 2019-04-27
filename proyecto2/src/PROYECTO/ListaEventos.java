@@ -100,7 +100,7 @@ private void incializarEvento(){
 	
 }
 
-public void ejecutarEvento(int pId, Protagonista pProta){
+public void ejecutarEvento(int pId, Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
 	lista.get(pId).imprimirInfo();
 	lista.get(pId).ejecutarEvento(pProta);
 }

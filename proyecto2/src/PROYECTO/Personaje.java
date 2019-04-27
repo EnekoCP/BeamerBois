@@ -26,7 +26,7 @@ protected void atacar(Personaje pEne)
 	
 }
 
-public boolean comprobarVida(){
+public boolean comprobarVida() throws ProtaHaMuertoExcepcion{
 	return (this.vida>0);
 }
 public int getVelocidad(){

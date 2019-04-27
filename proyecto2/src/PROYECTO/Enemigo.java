@@ -20,7 +20,7 @@ private void SoltarExp(Protagonista pProtagonista){
 
 	
 
-public boolean comprobarVida(Protagonista pProtagonista){
+public boolean comprobarVida(Protagonista pProtagonista) throws ProtaHaMuertoExcepcion{
 	boolean vida=super.comprobarVida();
 	if(!vida){
 		System.out.println("El enemigo ha muerto");

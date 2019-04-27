@@ -7,7 +7,7 @@ public Evento (String pDescripcion){
 	Descripcion=pDescripcion;
 }
 
-protected void ejecutarEvento(Protagonista pProta){}
+protected void ejecutarEvento(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{}
 
 
 

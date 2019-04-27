@@ -17,7 +17,7 @@ public class MenuPrincipal {
 		return miMenu;
 	}
 
-	public void jugarPartida() {
+	public void jugarPartida() throws ProtaHaMuertoExcepcion {
 		String pNombre=this.nombrePersonaje();
 		Protagonista prota= new Protagonista(pNombre);
 		boolean vivo=true;
@@ -26,10 +26,36 @@ public class MenuPrincipal {
 			prota.imprimirInfoPersonaje();
 			int numDado=this.tirarDado();
 			System.out.println("Has sacado:"+numDado+"!");
-			Tablero.getmiTablero().moverse(numDado,prota);
-			vivo=prota.comprobarVida();
+			try {
+				Tablero.getmiTablero().moverse(numDado,prota);
+				vivo=prota.comprobarVida();
+			} catch (ProtaHaMuertoExcepcion e) {
+				String resp=""; boolean chivato=false; 
+				while(!chivato){
+				System.out.println("Que quieres hacer:\n"
+						+ "1. Pulse < X > para volver a jugar\n"
+						+ "2. Pulse < Z > para finalizar la partida\n");
+				resp=sc.nextLine();
+				if(resp.equals("z")){
+					System.out.println("Ha acabado el juego");
+					chivato=true;
+					vivo=false;
+				}
+				else if(resp.equals("x")){
+					Tablero.getmiTablero().resetar();
+					System.out.println("Buena suerte!");
+					chivato=true;
+					jugarPartida();
+				}
+		
+				}
+			} catch (ProtaHaGanadoExcepcion e) {
+				System.out.println("Fin de juego");
+				
+			}
 		}
-		// TODO Auto-generated method stub
+		
+		
 
 	}
 	

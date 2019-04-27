@@ -91,10 +91,11 @@ public void defenderse(int pDen){
 	setVida(getVida()-pDen);
 }
 
-public boolean comprobarVida(){
+public boolean comprobarVida() throws ProtaHaMuertoExcepcion{
 	boolean vida=super.comprobarVida();
 	//this.subirNivel();
-	if(!vida){System.out.println("Has muerto en el combate");} else{subirNivel();}
+	if(!vida){System.out.println("Has muerto en el combate");
+	throw(new ProtaHaMuertoExcepcion());} else{subirNivel();}
 	return vida;
 }
 

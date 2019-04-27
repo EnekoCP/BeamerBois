@@ -38,7 +38,7 @@ private boolean ComprobarTablero(){
 	return (posicion<CantCasillas);
 }
 
-public void moverse(int pValorDado,Protagonista pProta){
+public void moverse(int pValorDado,Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
 	posicion=posicion+pValorDado;
 try{
 	if (this.ComprobarTablero()){
@@ -53,6 +53,16 @@ try{
 		lista.get(29).CargarCasilla(pProta);
 	}
 
+}
+
+public void resetar(){
+	miTablero=null;
+	posicion=0;
+}
+
+public int getPosicion() {
+	
+	return posicion;
 }
 
 }

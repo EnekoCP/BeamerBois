@@ -13,12 +13,16 @@ public class EventoCombate extends Evento {
 		ene=pEne;
 	}
 	//otros_metodos
-	public void ejecutarEvento(Protagonista pProta){
+	public void ejecutarEvento(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
+		if (Tablero.getmiTablero().getPosicion()==29){
+			this.CombateFinal(pProta);
+		}
+			
 		while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
 		String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
 		if(resp.equals("x")){
 			System.out.println("#####################################################################");
-			System.out.println("                             �Combate!");
+			System.out.println("                             ¡Combate!");
 			System.out.println("#####################################################################");
 			pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
 			
@@ -26,7 +30,7 @@ public class EventoCombate extends Evento {
 			this.combatir(pProta);}
 		else if(resp.equals("z")){
 			System.out.println("#####################################################################");
-			System.out.println("                             �Defensa!");
+			System.out.println("                             ¡Defensa!");
 			System.out.println("#####################################################################");
 			pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
 		this.defenderse(pProta);
@@ -63,5 +67,44 @@ public class EventoCombate extends Evento {
 		ene.imprimirInfoPersonaje();
 	}		
 	
+	private void CombateFinal(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
+				System.out.println("◣◢ (JEFE FINAL) ◣◢ ");
+				while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
+					String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
+				if(resp.equals("x")){
+					System.out.println("#####################################################################");
+					System.out.println("                             ¡Combate!");
+					System.out.println("#####################################################################");
+					pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
+					this.combatir(pProta);}
+				else if(resp.equals("z")){
+					System.out.println("#####################################################################");
+					System.out.println("                             ¡Defensa!");
+					System.out.println("#####################################################################");
+					pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
+				this.defenderse(pProta);
+						}				
+					}
+						// FALTA PETAR EL BUCLE
+						System.out.println("El enemigo esta a punto de morir");
+				
+						System.out.println("Tienes la posibilidad de darle un GOLPE MORTAL a tu enemigo saca numero PAR y ganaras la partida !!!");
+						
+						MenuPrincipal.getMenuPrincipal().menuTirarDado();
+						int numDado=Dado.getDado().tirarDado();
+						System.out.println("Has sacado:"+numDado+"!");
+				
+						if (numDado % 2==0){
+							System.out.println("El enemigo ha muerto");
+							System.out.println("¡¡¡¡GANASTE LA PARTIDA !!!!!");
+						}
+						else{
+							Tablero.getmiTablero().moverse(1, pProta);
+							throw(new ProtaHaGanadoExcepcion());
+						}
+					
+		
+			
+	}
 	
 }

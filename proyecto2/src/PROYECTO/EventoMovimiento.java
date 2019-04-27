@@ -9,7 +9,7 @@ public class EventoMovimiento extends Evento {
 		this.posicion=pPosicion;
 	}
 	
-	public void ejecutarEvento(Protagonista pPersonaje){
+	public void ejecutarEvento(Protagonista pPersonaje) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
 		
 		Tablero.getmiTablero().moverse(posicion, pPersonaje);
 	}
