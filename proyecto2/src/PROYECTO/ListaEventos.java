@@ -32,6 +32,7 @@ private void incializarEvento(){
 	Enemigo ene8= new Enemigo(250,60,6,80,"Integral Indefinda");
 	Enemigo ene9= new Enemigo(150,40,5,45,"Numeros Complejos");
 	Enemigo ene10= new Enemigo(300,90,8,100,"Calculo");
+	Enemigo ene11= new Enemigo(400,90,8,120,"Calculo en Julio");
 	
 	
 	//Asignaciones:
@@ -65,7 +66,7 @@ private void incializarEvento(){
 	EventoEstado evento28=new EventoEstado("Oca Estado:",30,1,0,50);
 	EventoMovimiento evento29=new EventoMovimiento("Oca Posicion: Retrocedes 12 casillas...",-12);
 	EventoCombate evento30=new EventoCombate("Combate Final, ¡Suerte!. ¿Que quieres hacer?",ene10);
-	
+	EventoCombate evento31=new EventoCombate("Combate Final de los FINALES, ¡Suerte!. ¿Que quieres hacer?",ene11);
 	
 	lista.add(evento1);
 	lista.add(evento2);
@@ -97,6 +98,7 @@ private void incializarEvento(){
 	lista.add(evento28);
 	lista.add(evento29);
 	lista.add(evento30);
+	lista.add(evento31);
 	
 }
 

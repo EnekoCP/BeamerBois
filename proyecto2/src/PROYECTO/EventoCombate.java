@@ -84,8 +84,7 @@ public class EventoCombate extends Evento {
 					pProta.imprimirInfoPersonaje(); ene.imprimirInfoPersonaje();
 				this.defenderse(pProta);
 						}				
-					}
-						// FALTA PETAR EL BUCLE
+				}
 						System.out.println("El enemigo esta a punto de morir");
 				
 						System.out.println("Tienes la posibilidad de darle un GOLPE MORTAL a tu enemigo saca numero PAR y ganaras la partida !!!");
@@ -97,10 +96,10 @@ public class EventoCombate extends Evento {
 						if (numDado % 2==0){
 							System.out.println("El enemigo ha muerto");
 							System.out.println("¡¡¡¡GANASTE LA PARTIDA !!!!!");
+							throw(new ProtaHaGanadoExcepcion());
 						}
 						else{
 							Tablero.getmiTablero().moverse(1, pProta);
-							throw(new ProtaHaGanadoExcepcion());
 						}
 					
 		

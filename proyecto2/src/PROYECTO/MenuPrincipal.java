@@ -51,6 +51,7 @@ public class MenuPrincipal {
 				}
 			} catch (ProtaHaGanadoExcepcion e) {
 				System.out.println("Fin de juego");
+				vivo=false;
 				
 			}
 		}
@@ -65,8 +66,8 @@ public class MenuPrincipal {
 		
 	}
 	private int tirarDado(){
-		return Dado.getDado().tirarDado();
-		//return 11;
+		//return Dado.getDado().tirarDado();
+		return 29;
 	}
 	
 	public String menuCombate(){

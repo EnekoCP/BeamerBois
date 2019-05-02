@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Tablero {
 	private ArrayList<Casilla> lista;
-	private static int CantCasillas = 30;
+	private static int CantCasillas = 31;
 	private int posicion=0;
 	private static Tablero miTablero=null;
 	

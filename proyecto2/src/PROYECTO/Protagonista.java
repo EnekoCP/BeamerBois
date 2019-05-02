@@ -3,7 +3,7 @@ package PROYECTO;
 public class Protagonista extends Personaje {
 	
 public Protagonista(String pNombre){
-	super (150, 45,5);
+	super (1000, 45,5);
 	super.setNombre(pNombre);
 	
 }
