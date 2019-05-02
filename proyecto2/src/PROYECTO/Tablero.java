@@ -6,6 +6,7 @@ import java.util.*;
 public class Tablero {
 	private ArrayList<Casilla> lista;
 	private static int CantCasillas = 31;
+	private static int casillaJefeFinal = 30;
 	private int posicion=0;
 	private static Tablero miTablero=null;
 	
@@ -34,23 +35,24 @@ private void inicializarCasilla(){
 	}
 }
 
-private boolean ComprobarTablero(){
+private boolean comprobarTablero(){
 	return (posicion<CantCasillas);
 }
 
-public void moverse(int pValorDado,Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
+public void moverse(int pValorDado,Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion
+{
 	posicion=posicion+pValorDado;
 try{
-	if (this.ComprobarTablero()){
+	if (this.comprobarTablero()){
 
-		lista.get(posicion).CargarCasilla(pProta);}
+		lista.get(posicion).cargarCasilla(pProta);}
 	else{
 		throw(new FueraTableroExcepcion());
 	}
 }
 	catch (FueraTableroExcepcion e){
-		//System.out.println("Fuera Tablero");
-		lista.get(29).CargarCasilla(pProta);
+		System.out.println("Fuera Tablero");
+		lista.get(casillaJefeFinal-1).cargarCasilla(pProta);
 	}
 
 }

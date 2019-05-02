@@ -55,9 +55,6 @@ public class MenuPrincipal {
 				
 			}
 		}
-		
-		
-
 	}
 	
 	public void menuTirarDado(){
@@ -67,7 +64,7 @@ public class MenuPrincipal {
 	}
 	private int tirarDado(){
 		//return Dado.getDado().tirarDado();
-		return 29;
+		return 35;
 	}
 	
 	public String menuCombate(){

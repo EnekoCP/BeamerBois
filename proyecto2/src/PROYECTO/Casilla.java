@@ -11,7 +11,7 @@ public void SetEvento(int pid){
 	idEvento=pid;
 }
 
-public void CargarCasilla(Protagonista pProtagonista) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
+public void cargarCasilla(Protagonista pProtagonista) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
 	ListaEventos.getListaEventos().ejecutarEvento(this.idEvento,pProtagonista);
 }
 
