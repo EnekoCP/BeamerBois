@@ -106,6 +106,10 @@ public void ejecutarEvento(int pId, Protagonista pProta) throws ProtaHaMuertoExc
 	lista.get(pId).imprimirInfo();
 	lista.get(pId).ejecutarEvento(pProta);
 }
+//Metodos que estaran comentados debido su uso exclusivo para las pruebas unitaria
+//public ArrayList<Evento> ListaEventosA(){
+//return lista;
+//}
 
 	
 }

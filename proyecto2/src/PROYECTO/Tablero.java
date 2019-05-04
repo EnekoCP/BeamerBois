@@ -70,9 +70,9 @@ public int getPosicion() {
 
 // Metodos que estaran comentados debido su uso exclusivo para las pruebas unitaria
 
-public ArrayList<Casilla> ListaCasilla(){
-	return lista;
-}
+//public ArrayList<Casilla> ListaCasilla(){
+//	return lista;
+//}
 
 
 }
