@@ -3,14 +3,14 @@ package PROYECTO;
 public class Protagonista extends Personaje {
 	
 public Protagonista(String pNombre){
-	super (1000, 45,5);
+	super (300, 45,5);
 	super.setNombre(pNombre);
 	
 }
 
 public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 	if(pVida>0){
-		super.decrincremetoVida(pVida);
+		super.incremetoVida(pVida);
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
 	}
@@ -49,7 +49,7 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 			System.out.println("Tu velocidad se ha decrementado en: "+pVelocidad+ " Puntos");
 		}
 	 if(pVida<0){
-		super.decrincremetoVida(pVida);
+		super.incremetoVida(pVida);
 		System.out.println("¡UPS, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha decrementado en: "+pVida+ " Puntos");
 	}
@@ -66,14 +66,14 @@ public void subirNivel(){
 		this.setNivel(this.getNivel()+1);
 		super.setDanno(getDanno()+10); super.setExp(0);
 		super.setVel(super.getVelocidad()+1);
-		if(super.getVida()<120){super.setVida(-200);}
+		super.incremetoVida(150);
 	}
 	else if(super.getNivel()==2 && super.getExp()>=100){
 		System.out.println("Has subido de NIVEL !!!");
 		this.setNivel(this.getNivel()+1);
 		super.setDanno(getDanno()+30); super.setExp(0);
 		super.setVel(super.getVelocidad()+3);
-		if(super.getVida()<200){super.setVida(-250);}
+		super.incremetoVida(250);
 	}
 	
 	else if(super.getNivel()>=3 && super.getExp()>=150){
@@ -81,15 +81,11 @@ public void subirNivel(){
 		this.setNivel(this.getNivel()+1);
 		super.setDanno(getDanno()+50); super.setExp(0);
 		super.setVel(super.getVelocidad()+3);
-		if(super.getVida()<250){super.setVida(-250);} else{super.setVida(-(super.getVida()+50));}
+		super.incremetoVida(300);
 	}
 	
 }
 
-
-public void defenderse(int pDen){
-	setVida(getVida()-pDen);
-}
 
 public boolean comprobarVida() throws ProtaHaMuertoExcepcion{
 	boolean vida=super.comprobarVida();

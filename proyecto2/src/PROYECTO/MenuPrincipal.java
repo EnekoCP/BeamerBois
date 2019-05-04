@@ -63,8 +63,8 @@ public class MenuPrincipal {
 		
 	}
 	private int tirarDado(){
-		//return Dado.getDado().tirarDado();
-		return 35;
+		return Dado.getDado().tirarDado();
+		
 	}
 	
 	public String menuCombate(){
@@ -72,12 +72,11 @@ public class MenuPrincipal {
 		System.out.println("Que quieres hacer:\n"
 				+ "1. Pulse < x > para atacar\n"
 				+ "2. Pulse < z > para defenderte\n");
-		// TODO hacer una exepcion en el caso de que metan un formato incorrecto
 		resp=sc.nextLine();
 		return resp;
 		}
 	//otros_metodos
-	public void menuMoverse(){}
+	//public void menuMoverse(){}
 	
 	private String nombrePersonaje(){
 		String nombre="";

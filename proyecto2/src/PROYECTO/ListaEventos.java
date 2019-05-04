@@ -66,7 +66,7 @@ private void incializarEvento(){
 	EventoEstado evento28=new EventoEstado("Oca Estado:",30,1,0,50);
 	EventoMovimiento evento29=new EventoMovimiento("Oca Posicion: Retrocedes 12 casillas...",-12);
 	EventoCombate evento30=new EventoCombate("Combate Final, ¡Suerte!. ¿Que quieres hacer?",ene10);
-	EventoCombate evento31=new EventoCombate("Combate Final de los FINALES, ¡Suerte!. ¿Que quieres hacer?",ene11);
+	EventoCombate evento31=new EventoCombate("Combate Final de los FINALES. ¿Que quieres hacer?",ene11);
 	
 	lista.add(evento1);
 	lista.add(evento2);

@@ -19,9 +19,17 @@ public class TableroTest {
 	}
 
 	@Test
-	public void testMoverse() {
+	public void testMoverse() throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion  {
 		Tablero.getmiTablero().moverse(1, prota);
+		assertEquals(Tablero.getmiTablero().getPosicion(),1);
 	}
+	
+	@Test
+	public void testInicializarCasilla() {
+		assertEquals(Tablero.getmiTablero().ListaCasilla().size(),31);
+	
+	}
+
 
 	//constructura
 

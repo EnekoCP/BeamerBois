@@ -60,7 +60,7 @@ protected void setVida(int pVida){
 	this.vida=(vida-pVida);
 }
 
-protected void decrincremetoVida(int pVida){
+protected void incremetoVida(int pVida){
 	this.vida=(vida+pVida);
 }
 

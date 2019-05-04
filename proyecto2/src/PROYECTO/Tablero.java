@@ -27,7 +27,7 @@ public static Tablero getmiTablero(){
 private void inicializarCasilla(){
 	// Por defecto la idVento de las casillas será igual a nombre. Para futuros cambios,
 	// utilizamos el metodo setEvento
-	
+
 	for (int i = 0; i < CantCasillas; i++)
 	{
 		Casilla c = new Casilla(i);
@@ -52,6 +52,7 @@ try{
 }
 	catch (FueraTableroExcepcion e){
 		System.out.println("Fuera Tablero");
+		posicion=29;
 		lista.get(casillaJefeFinal-1).cargarCasilla(pProta);
 	}
 
@@ -66,6 +67,13 @@ public int getPosicion() {
 	
 	return posicion;
 }
+
+// Metodos que estaran comentados debido su uso exclusivo para las pruebas unitaria
+
+public ArrayList<Casilla> ListaCasilla(){
+	return lista;
+}
+
 
 }
 
