@@ -80,9 +80,14 @@ public class MenuPrincipal {
 	
 	private String nombrePersonaje(){
 		String nombre="";
+		System.out.println("EY! Te veo con ganas de jugar a VIKODY ... ");
+		System.out.println("");
 		System.out.println("Como se llamará tu personaje?");
 		nombre = sc.nextLine();
+		System.out.println("");
 		System.out.println("Bienvenido a Vikody "+nombre);
+		System.out.println("EMPEZEMOS EL JUEGO !!! ");
+		System.out.println("");
 		return nombre;
 	}
 	

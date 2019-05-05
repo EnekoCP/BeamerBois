@@ -11,45 +11,53 @@ public Protagonista(String pNombre){
 public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 	if(pVida>0){
 		super.incremetoVida(pVida);
+		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
 	}
 	if(pVelocidad>0){
 		super.setVel(pVelocidad+super.getVelocidad());
+		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu velocidad se ha incrementado en: "+pVelocidad+ " Puntos");
 	}
 	 if(pExp>0){
 		super.setExp(pExp+super.getExp());
+		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu experiencia se ha incrementado en: "+pExp+ " Puntos");
 		subirNivel();
 	}
 	 if(pDanno>0){
 		super.setDanno(pDanno+super.getDanno());;
+		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu danno se ha incrementado en: "+pDanno+ " Puntos");
 		
 	}
 	 if(pDanno<0){
 			super.setDanno(pDanno+super.getDanno());;
+			System.out.println("");
 			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 			System.out.println("Tu danno se ha decrementado en: "+pDanno+ " Puntos");
 			
 		}
 	 if(pExp<0){
 			super.setExp(pExp+super.getExp());
+			System.out.println("");
 			System.out.println("¡UPS, "+super.getNombre()+"!");
 			System.out.println("Tu experiencia se ha decrementado en: "+pExp+ " Puntos");
 			subirNivel();
 		}
 	 if(pVelocidad<0){
 			super.setVel(pVelocidad+super.getVelocidad());
+			System.out.println("");
 			System.out.println("¡UPS, "+super.getNombre()+"!");
 			System.out.println("Tu velocidad se ha decrementado en: "+pVelocidad+ " Puntos");
 		}
 	 if(pVida<0){
 		super.incremetoVida(pVida);
+		System.out.println("");
 		System.out.println("¡UPS, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha decrementado en: "+pVida+ " Puntos");
 	}
@@ -62,6 +70,7 @@ public void subirNivel(){
 	//}
 	
 	if(super.getNivel()==1 && super.getExp()>=50){
+		System.out.println("");
 		System.out.println("Has subido de NIVEL !!!");
 		this.setNivel(this.getNivel()+1);
 		super.setDanno(getDanno()+10); super.setExp(0);
@@ -69,6 +78,7 @@ public void subirNivel(){
 		super.incremetoVida(150);
 	}
 	else if(super.getNivel()==2 && super.getExp()>=100){
+		System.out.println("");
 		System.out.println("Has subido de NIVEL !!!");
 		this.setNivel(this.getNivel()+1);
 		super.setDanno(getDanno()+30); super.setExp(0);
@@ -77,6 +87,7 @@ public void subirNivel(){
 	}
 	
 	else if(super.getNivel()>=3 && super.getExp()>=150){
+		System.out.println("");
 		System.out.println("Has subido de NIVEL !!!");
 		this.setNivel(this.getNivel()+1);
 		super.setDanno(getDanno()+50); super.setExp(0);

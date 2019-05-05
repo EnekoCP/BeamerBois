@@ -15,7 +15,7 @@ public class EventoCombate extends Evento {
 	//otros_metodos
 	public void ejecutarEvento(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
 		if (Tablero.getmiTablero().getPosicion()==29){
-			this.CombateFinal(pProta);
+			this.combateFinal(pProta);
 		}
 			
 		while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
@@ -67,7 +67,7 @@ public class EventoCombate extends Evento {
 		ene.imprimirInfoPersonaje();
 	}		
 	
-	private void CombateFinal(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
+	private void combateFinal(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
 				System.out.println("◣◢ (JEFE FINAL) ◣◢ ");
 				while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
 					String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
