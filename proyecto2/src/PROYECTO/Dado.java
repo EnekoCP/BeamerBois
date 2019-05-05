@@ -20,6 +20,7 @@ public static Dado getDado(){
 public int tirarDado(){
 	Random r=new Random();
 	int tirada= r.nextInt(nCaras)+1;
+	//return tirada;
 	return 6;
 }
 }

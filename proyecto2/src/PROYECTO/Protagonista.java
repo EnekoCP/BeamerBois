@@ -102,6 +102,8 @@ public boolean comprobarVida() throws ProtaHaMuertoExcepcion{
 	boolean vida=super.comprobarVida();
 	//this.subirNivel();
 	if(!vida){System.out.println("Has muerto en el combate");
+	System.out.println("");
+	System.out.println("");
 	throw(new ProtaHaMuertoExcepcion());} else{subirNivel();}
 	return vida;
 }

@@ -68,7 +68,12 @@ public class EventoCombate extends Evento {
 	}		
 	
 	private void combateFinal(Protagonista pProta) throws ProtaHaMuertoExcepcion, ProtaHaGanadoExcepcion{
-				System.out.println("◣◢ (JEFE FINAL) ◣◢ ");
+				System.out.println("");
+				System.out.println("¡¡¡ JEFE FINAL !!!");
+				System.out.println("");
+				System.out.println("Estas cerca de pasarte el juego ...");
+				System.out.println("Buena suerte !");
+				System.out.println("");
 				while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
 					String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
 				if(resp.equals("x")){

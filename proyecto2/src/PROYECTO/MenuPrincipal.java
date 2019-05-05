@@ -25,6 +25,7 @@ public class MenuPrincipal {
 			this.menuTirarDado();
 			prota.imprimirInfoPersonaje();
 			int numDado=this.tirarDado();
+			System.out.println("");
 			System.out.println("Has sacado:"+numDado+"!");
 			try {
 				Tablero.getmiTablero().moverse(numDado,prota);
@@ -44,6 +45,7 @@ public class MenuPrincipal {
 				else if(resp.equals("x")){
 					Tablero.getmiTablero().resetar();
 					System.out.println("Buena suerte!");
+					System.out.println("");
 					chivato=true;
 					jugarPartida();
 				}
@@ -69,7 +71,7 @@ public class MenuPrincipal {
 	
 	public String menuCombate(){
 		String resp="";
-		System.out.println("Que quieres hacer:\n"
+		System.out.println("\n"
 				+ "1. Pulse < x > para atacar\n"
 				+ "2. Pulse < z > para defenderte\n");
 		resp=sc.nextLine();
