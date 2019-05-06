@@ -64,10 +64,7 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 }
 
 public void subirNivel(){
-	//if (this.getExp()>=this.getNivel()*100){
-	//	this.setNivel(this.getNivel()+1);
-	//	System.out.println("Has subido de NIVEL !!!");
-	//}
+
 	
 	if(super.getNivel()==1 && super.getExp()>=50){
 		System.out.println("");

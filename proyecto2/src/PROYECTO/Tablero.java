@@ -51,7 +51,7 @@ try{
 	}
 }
 	catch (FueraTableroExcepcion e){
-		System.out.println("Fuera Tablero");
+		//System.out.println("Fuera Tablero");
 		posicion=29;
 		lista.get(casillaJefeFinal-1).cargarCasilla(pProta);
 	}

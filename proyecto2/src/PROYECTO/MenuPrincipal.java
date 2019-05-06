@@ -53,7 +53,24 @@ public class MenuPrincipal {
 				}
 			} catch (ProtaHaGanadoExcepcion e) {
 				System.out.println("Fin de juego");
-				vivo=false;
+				System.out.println("");
+				String resp=""; boolean chivato=false; 
+				while(!chivato){
+				System.out.println("Que quieres hacer:\n"
+						+ "1. Pulse < X > para volver a jugar\n"
+						+ "2. Pulse < Z > para finalizar la partida\n");
+				resp=sc.nextLine();
+				if(resp.equals("z")){
+					chivato=true;
+					vivo=false;
+				}
+				else if(resp.equals("x")){
+					Tablero.getmiTablero().resetar();
+					System.out.println("Buena suerte!");
+					chivato=true;
+					jugarPartida();
+				}
+				}
 				
 			}
 		}

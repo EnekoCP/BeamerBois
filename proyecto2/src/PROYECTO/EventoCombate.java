@@ -72,7 +72,7 @@ public class EventoCombate extends Evento {
 				System.out.println("¡¡¡ JEFE FINAL !!!");
 				System.out.println("");
 				System.out.println("Estas cerca de pasarte el juego ...");
-				System.out.println("Buena suerte !");
+				System.out.println("! Buena suerte !");
 				System.out.println("");
 				while(pProta.comprobarVida()&&ene.comprobarVida(pProta)){
 					String resp=MenuPrincipal.getMenuPrincipal().menuCombate();
@@ -98,7 +98,7 @@ public class EventoCombate extends Evento {
 						
 						MenuPrincipal.getMenuPrincipal().menuTirarDado();
 						int numDado=Dado.getDado().tirarDado();
-						System.out.println("Has sacado:"+numDado+"!");
+						System.out.println("! Has sacado:"+numDado+" !");
 				
 						if (numDado % 2==0){
 							System.out.println("El enemigo ha muerto");
