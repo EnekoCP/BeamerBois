@@ -21,6 +21,6 @@ public int tirarDado(){
 	Random r=new Random();
 	int tirada= r.nextInt(nCaras)+1;
 	return tirada;
-
+	
 }
 }

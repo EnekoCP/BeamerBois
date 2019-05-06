@@ -14,12 +14,14 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha incrementado en: "+pVida+ " Puntos");
+		System.out.println("");
 	}
 	if(pVelocidad>0){
 		super.setVel(pVelocidad+super.getVelocidad());
 		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu velocidad se ha incrementado en: "+pVelocidad+ " Puntos");
+		System.out.println("");
 	}
 	 if(pExp>0){
 		super.setExp(pExp+super.getExp());
@@ -27,12 +29,14 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu experiencia se ha incrementado en: "+pExp+ " Puntos");
 		subirNivel();
+		System.out.println("");
 	}
 	 if(pDanno>0){
 		super.setDanno(pDanno+super.getDanno());;
 		System.out.println("");
 		System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 		System.out.println("Tu danno se ha incrementado en: "+pDanno+ " Puntos");
+		System.out.println("");
 		
 	}
 	 if(pDanno<0){
@@ -40,6 +44,7 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 			System.out.println("");
 			System.out.println("¡Enhorabuena, "+super.getNombre()+"!");
 			System.out.println("Tu danno se ha decrementado en: "+pDanno+ " Puntos");
+			System.out.println("");
 			
 		}
 	 if(pExp<0){
@@ -48,18 +53,21 @@ public void setAtributos(int pVida,int pVelocidad,int pExp,int pDanno){
 			System.out.println("¡UPS, "+super.getNombre()+"!");
 			System.out.println("Tu experiencia se ha decrementado en: "+pExp+ " Puntos");
 			subirNivel();
+			System.out.println("");
 		}
 	 if(pVelocidad<0){
 			super.setVel(pVelocidad+super.getVelocidad());
 			System.out.println("");
 			System.out.println("¡UPS, "+super.getNombre()+"!");
 			System.out.println("Tu velocidad se ha decrementado en: "+pVelocidad+ " Puntos");
+			System.out.println("");
 		}
 	 if(pVida<0){
 		super.incremetoVida(pVida);
 		System.out.println("");
 		System.out.println("¡UPS, "+super.getNombre()+"!");
 		System.out.println("Tu vida se ha decrementado en: "+pVida+ " Puntos");
+		System.out.println("");
 	}
 }
 
@@ -98,7 +106,9 @@ public void subirNivel(){
 public boolean comprobarVida() throws ProtaHaMuertoExcepcion{
 	boolean vida=super.comprobarVida();
 	//this.subirNivel();
-	if(!vida){System.out.println("Has muerto en el combate");
+	if(!vida){System.out.println("");
+		System.out.println("Que pena !!!");
+		System.out.println("Has muerto en el combate");
 	System.out.println("");
 	System.out.println("");
 	throw(new ProtaHaMuertoExcepcion());} else{subirNivel();}
